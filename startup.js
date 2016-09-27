@@ -37,11 +37,10 @@ function thatRndNum() {
 
 }
 
-var checkChoice = '';
-while (checkChoice === '') {
-  var person = prompt("Hit enter to create a startup idea! Q to Quit");
+var person = '';
+while (person === '') {
+  var person = prompt("Hit enter to create a startup idea! Any key to Quit").toUpperCase();
     if (person != '' ) {
-      checkChoice === 'Q'
       break
       } else {
         // console.log(thisRndNum());   creates random number for array selection
