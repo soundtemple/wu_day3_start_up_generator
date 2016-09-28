@@ -24,28 +24,21 @@ var thatArray = ["Facebook Platform","Erlang Enthusiasts","Ex-Girlfriends",
 // console.log(thisArray.length);
 // console.log(thatArray.length);
 
+//math.random creates a random number between 0 and 1
+// math.floor rounds random to an integer
 
-
-function thisRndNum() {
-  var randomNumber = Math.floor( Math.random() * thisArray.length ) + 1;
-  return randomNumber;
-}
-
-function thatRndNum() {
-  var randomNumber = Math.floor( Math.random() * thatArray.length ) + 1;
-  return randomNumber;
-
-}
 
 var person = '';
 while (person === '') {
+  var thisRndNum = Math.floor( Math.random() * thisArray.length ) + 1;
+  var thatRndNum = Math.floor( Math.random() * thatArray.length ) + 1;
   var person = prompt("Hit enter to create a startup idea! Any key to Quit").toUpperCase();
     if (person != '' ) {
       break
       } else {
         // console.log(thisRndNum());   creates random number for array selection
         // console.log(thatRndNum());   creates random number for array selection
-        console.log(thisArray[thisRndNum()] + " " + thatArray[thatRndNum()]);
+        console.log(thisArray[thisRndNum] + " " + thatArray[thatRndNum]);
   }
 }
 
