@@ -27,18 +27,22 @@ var thatArray = ["Facebook Platform","Erlang Enthusiasts","Ex-Girlfriends",
 //math.random creates a random number between 0 and 1
 // math.floor rounds random to an integer
 
+// list of variables created outside while loop to stop new variables being created each time
 
+var thisRndNum;
+var thatRndNum;
 var person = '';
+
 while (person === '') {
-  var thisRndNum = Math.floor( Math.random() * thisArray.length ) + 1;
-  var thatRndNum = Math.floor( Math.random() * thatArray.length ) + 1;
-  var person = prompt("Hit enter to create a startup idea! Any key to Quit").toUpperCase();
-    if (person != '' ) {
-      break
-      } else {
-        // console.log(thisRndNum());   creates random number for array selection
-        // console.log(thatRndNum());   creates random number for array selection
-        console.log(thisArray[thisRndNum] + " " + thatArray[thatRndNum]);
+  thisRndNum = Math.floor( Math.random() * thisArray.length ) + 1;
+  thatRndNum = Math.floor( Math.random() * thatArray.length ) + 1;
+  person = prompt("Hit enter to create a startup idea! Any key to Quit").toUpperCase();
+  if (person != '' ) {
+    break;
+  } else {
+    // console.log(thisRndNum());   creates random number for array selection
+    // console.log(thatRndNum());   creates random number for array selection
+    console.log(thisArray[thisRndNum] + " " + thatArray[thatRndNum]);
   }
 }
 
